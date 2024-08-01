@@ -17,15 +17,16 @@
 
 .modalContent {
     background: #ffffff59;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     width: 90%;
-    max-width: 500px;
+    max-width: 350px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .modalContent h2 {
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 25px;
 }
 
 .modalContent form {
@@ -52,6 +53,7 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .closeButton {

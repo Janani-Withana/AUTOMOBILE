@@ -6,7 +6,6 @@ import carImage from '../assets/images/car-image.png'; // Update with actual pat
 import Modal from '../components/login_modal'; // Import the Modal component
 
 const LandingPage = () => {
-  const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState(null);
 
   const openModal = (type) => setModalType(type);
@@ -16,7 +15,7 @@ const LandingPage = () => {
     <div className="container">
       <header className="header">
         <div className="logo">
-          <img src={logo} alt="Rimberio Logo" className="logoImage" />
+          <img src={logo} alt="AutoMobile Logo" className="logoImage" />
         </div>
       </header>
       <main className="main">
