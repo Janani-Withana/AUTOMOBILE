@@ -1,0 +1,289 @@
+  /* Define the sliding animation */
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0.8;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInTop {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInBottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #011532;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+
+  .header {
+    position: relative;
+    width: 100%;
+    display: flex;
+  }
+
+  /* .logo {
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+  } */
+  .logo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .logoImage {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .logoText {
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  .main {
+    display: flex;
+    width: 100%;
+    height: calc(120vh - 80px);
+  }
+
+  .leftColumn {
+    flex: 1;
+    background-color: #011532;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    animation: slideInLeft 1s ease-out;
+  }
+
+  .rightColumn {
+    flex: 2;
+    flex-direction: column;
+    background-color: #072147;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+    animation: slideInRight 1s ease-out;
+  }
+
+  .title {
+    font-size: 65px;
+    font-weight: bold;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: 'Klein', sans-serif;
+    font-style: italic;
+  }
+
+  .title span {
+    display: block;
+  }
+
+  .title .white {
+    color: #ffffff;
+  }
+
+  .title .orange {
+    color: #ef620c;
+  }
+
+  .subtitle {
+    font-size: 25px;
+    margin: 10px 0 25px;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+  }
+
+  .subtitle span {
+    display: block;
+  }
+
+  /* Add styles for buttons */
+  .button {
+    border: none;
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .signInButton {
+    background-color: #ffffff;
+    color: #011532;
+  }
+
+  .signUpButton {
+    background-color: #ff7b00;
+    color: #011532;
+  }
+
+  /* Add space between buttons */
+  .buttons {
+    display: flex;
+    gap: 20px;
+    /* Space between buttons */
+  }
+
+  .services {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 10%;
+    margin-top: 20px;
+  }
+
+  .service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #001f3f;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+
+  .checkIcon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ef620c;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 10px;
+  }
+
+  .carImage {
+    margin-left: 20%;
+    max-width: 70%;
+  }
+
+
+  /* Media queries */
+
+  /* Mobile devices */
+  @media (max-width: 600px) {
+    .container {
+      height: auto;
+      animation: slideInTop 1.5s ease-out;
+    }
+
+    .header {
+      flex-direction: row;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logoImage {
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .logoText {
+      font-size: 20px;
+    }
+
+    .main {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 0;
+    }
+
+    .leftColumn,
+    .rightColumn {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      clip-path: none;
+      align-items: center;
+      background-color: #011532;
+      padding: 10px;
+      animation: none;
+    }
+
+    .title {
+      font-size: 32px;
+      align-items: center;
+      /* padding: 20px; */
+    }
+
+    .subtitle {
+      font-size: 16px;
+      margin: 0 0 20px;
+      align-items: center;
+    }
+
+    .button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+
+    .services {
+      display: none;
+      /* Hide services on mobile */
+    }
+
+
+    .carImage {
+      margin: 5px 0;
+      max-width: 90%;
+    }
+  }
