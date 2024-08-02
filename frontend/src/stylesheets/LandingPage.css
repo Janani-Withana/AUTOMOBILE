@@ -71,8 +71,8 @@
   } */
   .logo {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 10px;
+    /* left: 5px; */
     display: flex;
     align-items: center;
   }
@@ -211,14 +211,20 @@
     margin-left: 10px;
   }
 
-  .carImage {
-    margin-left: 20%;
-    max-width: 70%;
+  .carImageContainer {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
   }
+  
+  .carImage {
 
-
+    max-width: 130%; /* Adjust as needed */
+  }
+  
   /* Media queries */
-
   /* Mobile devices */
   @media (max-width: 600px) {
     .container {
@@ -282,8 +288,15 @@
     }
 
 
+    .carImageContainer {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      z-index: 0;
+    }
+  
     .carImage {
-      margin: 5px 0;
       max-width: 90%;
     }
   }

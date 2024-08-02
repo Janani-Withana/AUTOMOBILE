@@ -20,9 +20,6 @@ const LandingPage = () => {
       </header>
       <main className="main">
         <div className="leftColumn">
-          {/* <div className="logo">
-            <img src={logo} alt="AutoMobile Logo" className="logoImage" />
-          </div> */}
           <h1 className="title">
             <span className="white">IT'S TIME TO </span>
             <span className="orange">REVAMP </span>
@@ -38,8 +35,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="rightColumn">
-          <img src={carImage} alt="Car" className="carImage" />
-          <div className="services">
+          {/* <div className="services">
             <div className="service">
               Interior Cleaning
               <span className="checkIcon">✓</span>
@@ -56,7 +52,10 @@ const LandingPage = () => {
               Scratch Removal
               <span className="checkIcon">✓</span>
             </div>
-          </div>
+          </div> */}
+        </div>
+        <div className="carImageContainer">
+          <img src={carImage} alt="Car" className="carImage" />
         </div>
       </main>
       <Modal isOpen={modalType === 'signIn'} onClose={closeModal} type="signIn" />
